@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing Chaira Carlos</title>
+	<!-- META TAGS -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Carlos Chaira">
+	<meta name="description" content="Landing Page">
+
+	<!-- STYLES -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/ionicons.min.css">
+	<link rel="stylesheet" href="assets/css/flexslider.css">
+	<link rel="stylesheet" href="assets/css/animsition.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="animsition">
+	<div class="site-hero">
+		<ul class="slides">
+			<li>
+				<div><span class="small-title uppercase montserrat-text"> nombre </span></div>
+				<div class="big-title uppercase montserrat-text">Carlos Jesus Chaira Telles</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- HISTORY OF AGENCY -->
+	<div class="container">
+		<div class="agency">
+			<div class="col-md-5 col-sm-12">
+				<div class="row">
+					<img src="assets/img/Carlos.jpg" alt="image">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- WHY CHOOSE US -->
+	<section class="services">
+		<div class="container">
+			<div class="col-md-7 col-sm-12 services-left wow fadeInUp">
+				<div class="row" style="margin-bottom:50px">
+					<div class="col-md-6 col-sm-12">
+						<div class="row">
+							<span class="montserrat-text uppercase service-title">Hobbies</span>
+							<ul>
+								<li>Tocar la guitarra eléctrica</li>
+								<li>Escuchar Música</li>
+								<li>Leer Novelas</li>
+								<li>Leer manga y ver anime</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="row">
+							<span class="montserrat-text uppercase service-title">Series Favoritas</span>
+							<ul>
+								<li>One Piece</li>
+								<li>World Trigger</li>
+								<li>Tengen Toppa Gurren-Lagann</li>
+								<li>Danshi Koukousei no Nichijou </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="row">
+							<span class="montserrat-text uppercase service-title">Novelas Favoritas</span>
+							<ul>
+								<li>I Shall Seal the Heavens</li>
+								<li>Pursuit of the Truth</li>
+								<li>Renegade Immortal</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="row">
+							<span class="montserrat-text uppercase service-title">Contacto</span>
+							<ul>
+								<li>carlos.chaira202365@potros.itson.edu.mx</li>
+								<li>6311136046</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-5 col-sm-12 services-right wow fadeInUp" data-wow-delay=".1s">
+				<div class="row">
+					<img src="assets/img/Guitarra.jpg" alt="image">
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<!-- FOOTER -->
+	<footer class="main-footer wow fadeInUp">
+
+	</footer>
+
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="assets/js/smoothScroll.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.animsition.min.js"></script>
+	<script type="text/javascript" src="assets/js/wow.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		$(window).load(function() {
+			new WOW().init();
+
+			// initialise flexslider
+			$('.site-hero').flexslider({
+				animation: "fade",
+				directionNav: false,
+				controlNav: false,
+				keyboardNav: true,
+				slideToStart: 0,
+				animationLoop: true,
+				pauseOnHover: false,
+				slideshowSpeed: 4000,
+			});
+
+
+			// initialize isotope
+			var $container = $('.portfolio_container');
+			$container.isotope({
+				filter: '*',
+			});
+
+			$('.portfolio_filter a').click(function(){
+				$('.portfolio_filter .active').removeClass('active');
+				$(this).addClass('active');
+
+				var selector = $(this).attr('data-filter');
+				$container.isotope({
+					filter: selector,
+					animationOptions: {
+						duration: 500,
+						animationEngine : "jquery"
+					}
+				});
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>
